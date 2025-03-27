@@ -7,7 +7,17 @@ services:
       - 9100-9122:9100-9122
       - 11210:11210
       - 21100-21199:21100-21199
+    networks:
+      couchbase_network:
+        ipv4_address: 192.168.100.2
 
     # Optional: Add volumes for persistence
     # volumes:
     #   - ./cb-node1-data:/opt/couchbase/var
+    #
+    #
+networks:
+  couchbase_network:
+    ipam:
+      config:
+        - subnet: 192.168.100.0/24  # Define a subnet
