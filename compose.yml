@@ -5,25 +5,6 @@ services:
     ports:
       - "8091-8096:8091-8096"  # Web UI and service ports
       - "11210-11211:11210-11211"  # Data access ports
-    networks:
-      - couchbase-network
-    environment:
-      - CLUSTER_NAME=my-cluster
     # Optional: Add volumes for persistence
     # volumes:
     #   - ./cb-node1-data:/opt/couchbase/var
-
-  cb-node2:
-    image: couchbase:community
-    container_name: cb-node2
-    networks:
-      - couchbase-network
-    depends_on:
-      - cb-node1
-    # Optional: Add volumes for persistence
-    # volumes:
-    #   - ./cb-node2-data:/opt/couchbase/var
-
-networks:
-  couchbase-network:
-    driver: bridge
