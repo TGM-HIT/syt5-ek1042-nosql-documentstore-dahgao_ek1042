@@ -6,7 +6,7 @@ services:
       - "8091-8097:8091-8097"  # Web UI and service ports
       - 9100-9122:9100-9122
       - 11210:11210
-      - 21100:21100
+      - 21100-21199:21100-21199
 
     # Optional: Add volumes for persistence
     # volumes:
