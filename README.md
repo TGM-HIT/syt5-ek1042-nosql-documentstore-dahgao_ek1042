@@ -39,6 +39,27 @@ docker run -t --name db -p 8091-8096:8091-8096 -p 11210-11211:11210-11211 \
 3. Enter the `ip`, `admin user` and `password` for the first node and cluster
 4. Click Join Cluster
 
+## Deploy Python FastAPI App
+
+Create `.env` with variables:
+```
+IP=<ip>
+COUCH_USER=<username>
+COUCH_PASSWORD=<password>
+```
+
+Install python dependencies:
+```
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+Execute the app:
+```
+python main.py
+```
+
 # Resources
 
 [1] - https://docs.couchbase.com/server/current/getting-started/start-here.html; 27.03.2025
