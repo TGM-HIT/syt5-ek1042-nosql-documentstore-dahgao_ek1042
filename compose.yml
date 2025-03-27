@@ -3,8 +3,11 @@ services:
     image: couchbase:community
     container_name: cb-node1
     ports:
-      - "8091-8096:8091-8096"  # Web UI and service ports
-      - "11210-11211:11210-11211"  # Data access ports
+      - "8091-8097:8091-8097"  # Web UI and service ports
+      - 9100-9122:9100-9122
+      - 11210:11210
+      - 21100:21100
+
     # Optional: Add volumes for persistence
     # volumes:
     #   - ./cb-node1-data:/opt/couchbase/var
