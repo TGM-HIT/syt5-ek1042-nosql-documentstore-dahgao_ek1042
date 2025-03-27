@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   cb-node1:
     image: couchbase:community
