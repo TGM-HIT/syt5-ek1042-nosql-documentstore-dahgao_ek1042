@@ -1,1 +1,4 @@
 couchbase
+fastapi
+fastapi[standard]
+python-dotenv
