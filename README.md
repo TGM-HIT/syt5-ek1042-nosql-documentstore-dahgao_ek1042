@@ -7,8 +7,7 @@ Team: Gao Simon, Dahmen Felix
 Run couchbase in docker with the community image.
 
 ```
-docker run -t --name db -p 8091-8096:8091-8096 -p 11210-11211:11210-11211 \
-  couchbase:community
+docker compose up -d
 ```
 
 ```
@@ -29,8 +28,7 @@ This tutorial [2] can also be used
 Run a second couchbase container in docker with the community image.
 
 ```
-docker run -t --name db -p 8091-8096:8091-8096 -p 11210-11211:11210-11211 \
-  couchbase:community
+docker compose up -d
 ```
 
 
@@ -59,6 +57,12 @@ Execute the app:
 ```
 python main.py
 ```
+
+## CRUD
+
+The endpoints is `localhost:8000/{key}`, with POST, GET, PUT, DELETE for CRUD.
+For Create and Update, the value is passed with the http body.
+
 
 # Resources
 
